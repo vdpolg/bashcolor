@@ -30,5 +30,6 @@ fi
 }
 
 echo -e "Hello World!"
+echo -e "Hello World!"
 
 exit 0
