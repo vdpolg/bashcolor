@@ -1,35 +1,24 @@
 #!/bin/bash
 export PATH
-color () {
-if [ "$#" -gt 0 ]; then
+#color reset
+cr=`echo -e "\e[0m"`
+echo -n "Please Enter color:  "; read COL
+echo -n "輸入你想說的話 :  "; read WORD
 
-local code=
+case "$COL" in
 
-case "$1" in
-
-black) code=30 ;;
-
-red) code=31 ;;
-
-green) code=32 ;;
-
-yellow) code=33 ;;
-
-blue) code=34 ;;
-
-magenta) code=35 ;;
-
-cyan) code=36 ;;
-
-white) code=37 ;;
+black) echo -en "\e[30m" ;;
+red) echo -en "\e[31m" ;;
+green) echo -en "\e[32m" ;;
+yellow) echo -en "\e[33m" ;;
+blue) echo -en "\e[34m" ;;
+magenta) echo -en "\e[35m" ;;
+cyan) echo -en "\e[36m" ;;
+white) echo -en "\e[37m" ;;
 
 esac
 
-fi
-
-}
-
-echo -e "Hello World!"
+echo $WORD $cr
 echo -e "Hello World!"
 
 exit 0
