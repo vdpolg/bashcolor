@@ -19,6 +19,5 @@ white) echo -en "\e[37m" ;;
 esac
 
 echo $WORD $cr
-echo -e "Hello World!"
 
 exit 0
